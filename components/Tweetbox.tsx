@@ -43,7 +43,7 @@ function Tweetbox({ setTweets }: Props) {
         username: session?.user?.name,
         profileImg: session?.user?.image || "/img/pp.png",
         text: input,
-        date: new Date().toString(),
+        date: new Date().getTime().toString(),
         image: image,
         like: [],
         comments: [],

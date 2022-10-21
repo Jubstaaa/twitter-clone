@@ -32,7 +32,7 @@ function Commentbox({
             username: session?.user?.name,
             profileImg: session?.user?.image || "/img/pp.png",
             text: input,
-            date: new Date().toString(),
+            date: new Date().getTime().toString(),
             id: (Math.random() + 1).toString(36).substring(2),
             email: session?.user?.email,
           }),

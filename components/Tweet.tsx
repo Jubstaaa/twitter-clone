@@ -70,7 +70,10 @@ function Tweet({ tweet, setTweets }: Props) {
                 @{slugify(tweet.username)}
               </p>
               <span>·</span>
-              <TimeAgo className="text-sm text-gray-500" date={tweet.date} />
+              <TimeAgo
+                className="text-sm text-gray-500"
+                date={parseInt(tweet.date)}
+              />
             </div>
             {session?.user?.email == tweet.email && (
               <>

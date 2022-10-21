@@ -25,7 +25,10 @@ function Comment({ comment }: Props) {
             @{slugify(comment.username)}
           </p>
           <span>·</span>
-          <TimeAgo className="text-sm text-gray-500" date={comment.date} />
+          <TimeAgo
+            className="text-sm text-gray-500"
+            date={parseInt(comment.date)}
+          />
         </div>
         <p>{comment.text}</p>
       </div>
