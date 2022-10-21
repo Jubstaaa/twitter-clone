@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  #comment:first-child hr {
+    display: none;
+  }
+
+  .body {
+    max-height: -webkit-fill-available;
+  }
+
+  .main {
+    max-height: -webkit-fill-available;
+  }
+
+  .delete-modal {
+    @apply flex justify-center items-center overflow-y-auto h-screen overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0  md:h-full bg-gray-400/80;
+  }
+  .delete-button {
+    @apply text-white bg-red-600 hover:bg-red-800 font-medium rounded-3xl text-sm  items-center px-5 py-2.5 text-center transition-all duration-150;
+  }
+  .cancel-button {
+    @apply text-gray-500 bg-white hover:bg-gray-100  rounded-3xl border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10  transition-all duration-150;
+  }
+  .refresh-button {
+    @apply h-8 w-8 cursor-pointer text-twitter transition-all duration-500 ease-out hover:rotate-180 active:scale-125;
+  }
+  .sidebar {
+    @apply bg-white h-full z-50 absolute sm:relative   flex  flex-col col-span-1 md:col-span-2 items-center justify-between px-4 md:items-start transition-all duration-300;
+  }
+  .tweet-button {
+    @apply bg-twitter font-bold text-white rounded-full disabled:opacity-40 self-center hover:bg-twitterBold;
+  }
+  .sidebar-items {
+    @apply flex max-w-fit items-center space-x-2 px-4 py-3 rounded-full hover:bg-gray-200 cursor-pointer transition-all duration-200;
+  }
+  .tweetbox-icon-div {
+    @apply hover:bg-twitter/10 rounded-full p-1.5 cursor-pointer transition-all duration-150 ease-out;
+  }
+  .tweetbox-icon {
+    @apply h-5 w-5;
+  }
+  .tweet-icon-div {
+    @apply flex cursor-pointer items-center space-x-3 text-gray-400 p-2 rounded-full transition-all duration-300;
+  }
+  .tweet-icon {
+    @apply h-5 w-5 transition-all duration-300;
+  }
+  .search-input-div {
+    @apply flex items-center space-x-2 mb-4 bg-gray-100 p-3 rounded-full mt-2  focus-within:bg-white focus-within:border-twitter focus-within:border text-gray-400 focus-within:text-twitter;
+  }
+  .search-input {
+    @apply  bg-transparent flex-1 outline-none  focus:bg-white;
+  }
+}
